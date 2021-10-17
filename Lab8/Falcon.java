@@ -1,0 +1,20 @@
+package Lab8;
+
+import java.security.SecureRandom;
+
+public class Falcon extends Animal{
+    @Override
+    protected int speed() {
+        return new SecureRandom().nextInt(250);
+    }
+
+    @Override
+    protected boolean flyable() {
+        return true;
+    }
+
+    @Override
+    public int getSpeed() {
+        return speed();
+    }
+}
